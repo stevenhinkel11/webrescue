@@ -28,7 +28,7 @@
     <h1>Modern websites for Santa Cruz small businesses.</h1>
     <p class="sub">We refresh outdated websites so they work beautifully on every device, load faster, and make it easier for customers to contact you. Real local people &mdash; not a call center, not an offshore agency.</p>
     <a href="#review" class="cta-btn">Get a Free Website Review</a>
-    <div class="fine-print">Takes 2 minutes. No obligation, no sales pitch.</div>
+    <div class="fine-print">Takes 1 minute to fill out. We'll do the hard work and get back to you within 2 business days.</div>
   </div>
 </section>
 
@@ -83,26 +83,38 @@
     <h2>Recent work</h2>
     <p style="color: var(--ink-light); margin-top: -16px;">A few real sites we've built and refreshed for local and professional service businesses.</p>
     <div class="work-grid">
-      <div class="work-card">
-        <span class="kind">Website Refresh</span>
-        <a href="https://leadingedge-consulting.com/" target="_blank" rel="noopener">Leading Edge Consulting &#8599;</a>
-        <p style="margin:0; color: var(--ink-light); font-size: 0.9rem;">Organizational culture consulting</p>
-      </div>
-      <div class="work-card">
-        <span class="kind">Website Refresh</span>
-        <a href="https://bayareateambuilding.com/" target="_blank" rel="noopener">Bay Area Team Building &#8599;</a>
-        <p style="margin:0; color: var(--ink-light); font-size: 0.9rem;">Corporate team-building events</p>
-      </div>
-      <div class="work-card">
-        <span class="kind">Website Refresh</span>
-        <a href="https://theunblockco.com/" target="_blank" rel="noopener">The Unblock Co. &#8599;</a>
-        <p style="margin:0; color: var(--ink-light); font-size: 0.9rem;">Operations &amp; process consulting</p>
-      </div>
-      <div class="work-card">
-        <span class="kind">Website Refresh</span>
-        <a href="https://pacificrimplanning.com/" target="_blank" rel="noopener">Pacific Rim Planning Group &#8599;</a>
-        <p style="margin:0; color: var(--ink-light); font-size: 0.9rem;">Land use &amp; planning consultants</p>
-      </div>
+      <a class="work-card" href="https://bayareateambuilding.com/" target="_blank" rel="noopener">
+        <img src="work-bayarea-thumb.jpg" alt="Bay Area Team Building website">
+        <div class="work-card-body">
+          <span class="kind">Website Refresh</span>
+          <span class="work-card-title">Bay Area Team Building &#8599;</span>
+          <p>Corporate team-building events</p>
+        </div>
+      </a>
+      <a class="work-card" href="https://theunblockco.com/" target="_blank" rel="noopener">
+        <img src="work-unblock-thumb.jpg" alt="The Unblock Co. website">
+        <div class="work-card-body">
+          <span class="kind">Website Refresh</span>
+          <span class="work-card-title">The Unblock Co. &#8599;</span>
+          <p>Operations &amp; process consulting</p>
+        </div>
+      </a>
+      <a class="work-card" href="https://pacificrimplanning.com/" target="_blank" rel="noopener">
+        <img src="work-pacificrim-thumb.jpg" alt="Pacific Rim Planning Group website">
+        <div class="work-card-body">
+          <span class="kind">Website Refresh</span>
+          <span class="work-card-title">Pacific Rim Planning Group &#8599;</span>
+          <p>Land use &amp; planning consultants</p>
+        </div>
+      </a>
+      <a class="work-card" href="https://leadingedge-consulting.com/" target="_blank" rel="noopener">
+        <img src="work-leadingedge-thumb.jpg" alt="Leading Edge Consulting website">
+        <div class="work-card-body">
+          <span class="kind">Website Refresh</span>
+          <span class="work-card-title">Leading Edge Consulting &#8599;</span>
+          <p>Organizational culture consulting</p>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -145,6 +157,19 @@
       <label for="phone">Phone (optional)</label>
       <input type="tel" id="phone" name="phone" data-fs-field>
       <span data-fs-error="phone" class="fs-field-error"></span>
+
+      <fieldset class="preference-field">
+        <legend>How would you like your free review?</legend>
+        <label class="radio-option">
+          <input type="radio" name="review_preference" value="Chat live first" data-fs-field required>
+          Chat live first
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="review_preference" value="See written analysis first" data-fs-field required>
+          See a written analysis first
+        </label>
+      </fieldset>
+      <span data-fs-error="review_preference" class="fs-field-error"></span>
 
       <div class="submit-row">
         <button type="submit" class="cta-btn" data-fs-submit-btn>Request My Free Website Review</button>

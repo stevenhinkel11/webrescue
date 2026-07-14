@@ -52,12 +52,16 @@ header.site nav a.text-link:hover { color: var(--accent-dark); }
 }
 .logo span { color: var(--accent); }
 .locale-tag {
-  font-size: 0.78rem;
+  display: inline-block;
+  font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--ink-light);
+  color: var(--accent-dark);
+  background: rgba(14, 122, 114, 0.1);
   font-weight: 700;
-  margin-top: 2px;
+  margin-top: 4px;
+  padding: 3px 9px;
+  border-radius: 100px;
 }
 header.site nav a.cta-link {
   text-decoration: none;
@@ -82,7 +86,11 @@ h2 {
   letter-spacing: -0.01em;
   margin: 0 0 36px;
 }
-.hero { padding-top: 72px; text-align: center; }
+.hero {
+  padding-top: 72px;
+  text-align: center;
+  background: radial-gradient(ellipse 900px 500px at 50% -10%, rgba(14, 122, 114, 0.12), transparent 70%);
+}
 .hero .wrap { max-width: 680px; }
 .sub {
   font-size: 1.3rem;
@@ -168,6 +176,7 @@ h2 {
 .card {
   background: var(--paper);
   border: 1px solid var(--border);
+  border-top: 4px solid var(--accent);
   border-radius: 10px;
   padding: 28px 22px;
 }
@@ -176,17 +185,32 @@ h2 {
 .work-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 20px;
 }
 .work-card {
   border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 22px;
+  border-radius: 12px;
   background: var(--paper);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
+.work-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+.work-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  border-bottom: 1px solid var(--border);
+}
+.work-card-body { padding: 20px 22px; display: flex; flex-direction: column; gap: 6px; }
 .work-card .kind {
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -194,12 +218,12 @@ h2 {
   color: var(--accent-dark);
   font-weight: 700;
 }
-.work-card a {
+.work-card-title {
   font-weight: 600;
   font-size: 1.1rem;
-  text-decoration: none;
 }
-.work-card a:hover { text-decoration: underline; }
+.work-card:hover .work-card-title { text-decoration: underline; }
+.work-card-body p { margin: 0; color: var(--ink-light); font-size: 0.95rem; }
 .why-list {
   list-style: none;
   padding: 0;
@@ -246,6 +270,31 @@ h2 {
   border-radius: 8px;
   font-size: 1rem;
   font-family: inherit;
+}
+#review .preference-field {
+  border: none;
+  padding: 0;
+  margin: 16px 0 6px;
+}
+#review .preference-field legend {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  padding: 0;
+}
+#review .preference-field .radio-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0 0 10px;
+  cursor: pointer;
+}
+#review .preference-field input[type="radio"] {
+  width: auto;
+  accent-color: var(--accent);
+  cursor: pointer;
 }
 #review .submit-row { margin-top: 26px; }
 #form-success {

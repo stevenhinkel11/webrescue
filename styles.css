@@ -175,7 +175,7 @@ h2 {
 .card p { margin: 0; color: var(--ink-light); font-size: 1.02rem; }
 .work-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 .work-card {

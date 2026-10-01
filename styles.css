@@ -18,9 +18,9 @@ body {
 }
 a { color: var(--accent-dark); }
 .wrap {
-  max-width: 2000px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 6vw;
+  padding: 0 clamp(24px, 4vw, 64px);
 }
 @media (max-width: 640px) { .wrap { padding: 0 22px; } }
 header.site {
@@ -83,7 +83,7 @@ h2 {
   text-align: center;
   background: radial-gradient(ellipse 900px 500px at 50% -10%, rgba(14, 122, 114, 0.12), transparent 70%);
 }
-.hero .wrap { max-width: 2000px; }
+.hero .wrap { max-width: 1400px; }
 .hero .sub { max-width: 60em; margin-left: auto; margin-right: auto; }
 .sub {
   font-size: 1.3rem;

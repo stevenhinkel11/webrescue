@@ -8,7 +8,7 @@
   --border: #e6e8ea;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; font-size: clamp(20px, 0.9vw + 12px, 30px); }
+html { scroll-behavior: smooth; font-size: clamp(17px, 0.74vw + 10px, 25px); }
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -357,7 +357,7 @@ footer {
   .cards, .work-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
-  html { font-size: 18px; }
+  html { font-size: 16.5px; }
   section { padding: 52px 0; }
   .problem-list, .why-list { grid-template-columns: 1fr; }
   .cards { grid-template-columns: 1fr; }

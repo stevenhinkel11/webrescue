@@ -46,6 +46,14 @@ header.site nav a.text-link {
   padding: 0;
 }
 header.site nav a.text-link:hover { color: var(--accent-dark); }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+}
+.brand img { width: 3.1rem; height: 3.1rem; flex-shrink: 0; }
 .logo {
   font-weight: 700;
   font-size: 1.8rem;
@@ -363,13 +371,21 @@ footer {
   .cards { grid-template-columns: 1fr; }
   .work-grid { grid-template-columns: 1fr; }
   header.site { padding: 18px 0; }
-  header.site nav { gap: 14px; }
-  header.site nav a.text-link { font-size: 0.88rem; }
-  .logo { font-size: 1.45rem; }
+  header.site nav { gap: 12px; }
+  header.site nav a.text-link { font-size: 0.8rem; }
+  .logo { font-size: 1.2rem; }
+  .brand { gap: 10px; }
+  .brand img { width: 2.3rem; height: 2.3rem; }
   .locale-tag { font-size: 0.62rem; padding: 2px 7px; }
   .bio { flex-direction: column; align-items: center; text-align: center; }
   .bio img { width: 180px; height: 180px; }
   .about-copy { padding: 32px 24px; }
   .pull-quote { font-size: 1.15rem; padding-left: 16px; }
   .cta-btn { width: 100%; text-align: center; padding: 18px 24px; }
+}
+@media (max-width: 380px) {
+  .brand img { width: 2rem; height: 2rem; }
+  .logo { font-size: 1.05rem; }
+  header.site nav { gap: 9px; }
+  header.site nav a.text-link { font-size: 0.74rem; }
 }

@@ -48,7 +48,7 @@ header.site nav a.text-link {
 header.site nav a.text-link:hover { color: var(--accent-dark); }
 .logo {
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   letter-spacing: -0.01em;
 }
 .logo span { color: var(--accent); }
@@ -365,7 +365,7 @@ footer {
   header.site { padding: 18px 0; }
   header.site nav { gap: 14px; }
   header.site nav a.text-link { font-size: 0.88rem; }
-  .logo { font-size: 1.1rem; }
+  .logo { font-size: 1.45rem; }
   .locale-tag { font-size: 0.62rem; padding: 2px 7px; }
   .bio { flex-direction: column; align-items: center; text-align: center; }
   .bio img { width: 180px; height: 180px; }

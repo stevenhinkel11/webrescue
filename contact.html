@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Web Rescue &mdash; Santa Cruz</title>
+<meta name="description" content="Get in touch with Web Rescue in Santa Cruz. Ask a question, or request a no-cost, no-obligation review of your current website.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="index.html" style="text-decoration:none; color:inherit;">
+      <div>
+        <div class="logo">Web<span>Rescue</span></div>
+        <div class="locale-tag">Santa Cruz, CA</div>
+      </div>
+    </a>
+    <nav>
+      <a href="about.html" class="text-link">About</a>
+      <a href="contact.html" class="text-link">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="final-cta contact-page">
+  <div class="wrap" id="review">
+    <h1>Contact us</h1>
+    <p class="contact-intro">Tell us a bit about you and your business. Next steps are typically a no-cost, no-obligation review of your current site &mdash; but we're also happy to just chat.</p>
+    <div data-fs-error class="fs-form-error"></div>
+    <form id="review-form" action="https://formspree.io/f/xrengvyz" method="POST">
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="name" data-fs-field required>
+      <span data-fs-error="name" class="fs-field-error"></span>
+
+      <label for="business">Business name</label>
+      <input type="text" id="business" name="business" data-fs-field required>
+      <span data-fs-error="business" class="fs-field-error"></span>
+
+      <label for="url">Current website (if you have one)</label>
+      <input type="text" id="url" name="current_website" data-fs-field placeholder="e.g. yourbusiness.com">
+      <span data-fs-error="current_website" class="fs-field-error"></span>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" data-fs-field required>
+      <span data-fs-error="email" class="fs-field-error"></span>
+
+      <label for="phone">Phone (optional)</label>
+      <input type="tel" id="phone" name="phone" data-fs-field>
+      <span data-fs-error="phone" class="fs-field-error"></span>
+
+      <label for="message">Anything you'd like us to know? (optional)</label>
+      <textarea id="message" name="message" rows="4" data-fs-field></textarea>
+      <span data-fs-error="message" class="fs-field-error"></span>
+
+      <fieldset class="preference-field">
+        <legend>How would you like to start?</legend>
+        <label class="radio-option">
+          <input type="radio" name="review_preference" value="Chat live first" data-fs-field required>
+          Let's chat first
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="review_preference" value="See written analysis first" data-fs-field required>
+          See a written review first
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="review_preference" value="Just have a question" data-fs-field required>
+          I just have a question
+        </label>
+      </fieldset>
+      <span data-fs-error="review_preference" class="fs-field-error"></span>
+
+      <div class="submit-row">
+        <button type="submit" class="cta-btn" data-fs-submit-btn>Send Message</button>
+      </div>
+    </form>
+    <div id="form-success" data-fs-success>
+      <h3 style="margin-top:0; color: var(--ink);">Thanks &mdash; got it.</h3>
+      <p style="color: var(--ink-light); margin-bottom:0;">We'll get back to you within 2 business days.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">&copy; 2026 Web Rescue &middot; Santa Cruz, CA &middot; <a href="mailto:steve@santacruzwebrescue.com">steve@santacruzwebrescue.com</a></div>
+</footer>
+
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#review-form', formId: 'xrengvyz' });
+
+  const successEl = document.getElementById('form-success');
+  new MutationObserver(function () {
+    if (successEl.hasAttribute('data-fs-active')) {
+      document.getElementById('review-form').style.display = 'none';
+    }
+  }).observe(successEl, { attributes: true, attributeFilter: ['data-fs-active'] });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+</body>
+</html>
